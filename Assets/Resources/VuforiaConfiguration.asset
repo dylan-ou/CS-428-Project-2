@@ -17,14 +17,13 @@ MonoBehaviour:
     ufoLicenseKey: QVVuR2NZVC8vLy8vQUFBQUtNZDZhbGQ3a1VCRXNsL3VNL3RMRTFwdTV0S0dHQitsa2NJQWxBWU44Y2JsZU9mRkIwMmRscHBwZnFzZ2EweWtOR1lQdGx3VGk1MjQrOE8zVDNYcFBLV05rby9hWVNXRUNodlNuMjU3R3J0NHd1RTd4c2duMzYvbFF5aEpYZFBacmtNR2RPSVFpMjIxUnNqWTBZeldZb3ZNNm1nNUZtYTdyNUsweEZZRzUyR1JPcERRWGs4d3VWZWJMa0YzYTZYWFlhYXN3NHN4QnZ5N1p5RGRuMEtOTWEzakJBVUJ0c0dLeS9PTHBKcG56d1gwM045dzZEdzFDQ3ZKUTA0ZkQyZ0VNZ1k5S0p2MkU1aUJNK1VZK1RIVFFadCtONG1LcVJKamRNczFRMXJETGtySmExMTBBVE9hVEVqTnRBRUw3ajRyUlhGbjNQNWZZTmZRVE5PaWN2MFJkbWxUZUtmckxoVHNvV0I1RnBHMjh4bEY=
     delayedInitialization: 0
     cameraDeviceModeSetting: -1
-    maxSimultaneousImageTargets: 2
-    maxSimultaneousObjectTargets: 2
+    maxSimultaneousImageTargets: 5
+    maxSimultaneousObjectTargets: 5
     virtualSceneScaleFactor: 1
     useDelayedLoadingObjectTargets: 0
     modelTargetRecoWhileExtendedTracked: 1
-    version: 9.3.3
-    eulaAcceptedVersions: '{"Values":["9.3","9.4","9.2","8.5"]}'
-    modelTargetMode: 0
+    version: 9.4.6
+    eulaAcceptedVersions: '{"Values":["9.3","9.4","9.2","8.5","7.1","7.2","8.1","8.3","9.0","9.1","0.0"]}'
   database:
     disableModelExtraction: 0
   videoBackground:
@@ -34,10 +33,11 @@ MonoBehaviour:
     unlitShader: {fileID: 10752, guid: 0000000000000000f000000000000000, type: 0}
     videoBackgroundEnabled: 1
   deviceTracker:
-    autoStartTracker: 0
-    arcoreRequirement: 0
-    autoImportArcore: 0
+    autoStartTracker: 1
+    arcoreRequirement: 1
+    autoImportArcore: 1
   playmode:
+    mSequencePath: 
     playModeType: 0
   webcam:
     renderTextureLayer: 30
