@@ -1,37 +1,39 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Vuforia;
 
 public class animationScript : MonoBehaviour
 {
+    public GameObject dylan;
+    public GameObject button;
+
     Animator animator;
     AudioSource audioSource;
-    bool buttonPressed = false;
 
     // Start is called before the first frame update
     void Start()
     {
-        animator = GetComponent<Animator>();
-        audioSource = GetComponent<AudioSource>();
+        animator = dylan.GetComponent<Animator>();
+        audioSource = dylan.GetComponent<AudioSource>();
+        button = GameObject.Find("Button");
+        button.GetComponent<VirtualButtonBehaviour>().RegisterOnButtonPressed(OnButtonPressed);
+        button.GetComponent<VirtualButtonBehaviour>().RegisterOnButtonReleased(OnButtonReleased);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void OnButtonPressed (VirtualButtonBehaviour vb)
     {
-       
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            buttonPressed = true;
-        } else
-        {
-            buttonPressed = false;
-        }
-
-        if (buttonPressed && animator.GetCurrentAnimatorStateInfo(0).IsName("Breathing Idle"))
+        if (animator.GetCurrentAnimatorStateInfo(0).IsName("Breathing Idle"))
         {
             audioSource.Play();
         }
 
-        animator.SetBool("buttonPressed", buttonPressed);
+        animator.SetBool("buttonPressed", true);
+    }
+
+    public void OnButtonReleased(VirtualButtonBehaviour vb)
+    {
+        Debug.Log("Fuck 2");
+        animator.SetBool("buttonPressed", false);
     }
 }
